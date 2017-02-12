@@ -60,7 +60,6 @@ https://otrejot@bitbucket.org/otrejot/maquina-ind-con-control-difuso
 
 #define LEN                     5000
 #define STRIDE                  1       //Para el dsp
-#define TEST                    100000  //???
 
 //Frecuencia de muestreo
 
