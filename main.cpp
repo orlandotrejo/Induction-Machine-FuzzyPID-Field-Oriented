@@ -67,7 +67,7 @@ https://otrejot@bitbucket.org/otrejot/maquina-ind-con-control-difuso
 #define Fs_1                    1e-4
 #define Ts_i                    Fs_1
 
-#define PWMMAX                  1     //Por que ??
+#define PWMMAX                  1    
 #define Vdc                     400
 
 /* // DSP MAPEO DE LAS VARIABLES EN MEMORIA
@@ -107,7 +107,7 @@ void maquina_model(float *X, float *Y);
 
 void flujo_est(float *M, float *N);
 
-/* // DSP FUNCIONES
+/* // DSP PLL
 void InitPLL_SDRAM(void);
 */
 
@@ -120,7 +120,6 @@ float c1,c2,c3,c4,c5,c6,c7;
 float Vsx,Vsy;
 float Te,Tl=0.0,J=0.089,P=2;           //Parametros de la Maquina
 
-// EL MAIN deberia cambiar a void ?
 
 int main(void)
 {
@@ -225,7 +224,7 @@ int main(void)
     c1=Rr/Lr;
     c2=c1*Lm;
 
-// APERTURA DE ARCHIVOS
+// ABRIR ARCHIVOS
 
     ferr=fopen("ErrorW.dat", "w");
     fIsaRef=fopen("Isa_ref.dat", "w");
@@ -370,7 +369,7 @@ int main(void)
         else            Dc=0;
 */
 
-        // Integral del Controlador Difuso?
+        // Integral del Controlador Difuso
 
         //Da_buff=SID_TS_I(Err_a,Verr_a);
         //Db_buff=SID_TS_I(Err_b,Verr_b);
